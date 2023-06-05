@@ -39,8 +39,9 @@ jobs:
       - name: Checkout docker compose files
         uses: actions/checkout@v4
         with:
-          repository: zammad/zammad-docker-compose
+          repository: sebix/zammad-docker-compose
           path: zammad-docker-compose
+          ref: opensearch
 
       - name: Run docker compose tests
         run: |
