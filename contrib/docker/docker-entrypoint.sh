@@ -6,6 +6,8 @@ set -e
 : "${ELASTICSEARCH_ENABLED:=true}"
 : "${ELASTICSEARCH_HOST:=zammad-opensearch}"
 : "${ELASTICSEARCH_PORT:=9200}"
+: "${ELASTICSEARCH_USER:=admin}"
+: "${ELASTICSEARCH_PASS:=admin}"
 : "${ELASTICSEARCH_SCHEMA:=http}"
 : "${ELASTICSEARCH_NAMESPACE:=zammad}"
 : "${ELASTICSEARCH_REINDEX:=true}"
