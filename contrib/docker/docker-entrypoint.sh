@@ -4,7 +4,7 @@ set -e
 
 : "${AUTOWIZARD_JSON:=''}"
 : "${ELASTICSEARCH_ENABLED:=true}"
-: "${ELASTICSEARCH_HOST:=zammad-elasticsearch}"
+: "${ELASTICSEARCH_HOST:=zammad-opensearch}"
 : "${ELASTICSEARCH_PORT:=9200}"
 : "${ELASTICSEARCH_SCHEMA:=http}"
 : "${ELASTICSEARCH_NAMESPACE:=zammad}"
@@ -91,7 +91,7 @@ if [ "$1" = 'zammad-init' ]; then
     fi
 
     until (echo > /dev/tcp/${ELASTICSEARCH_HOST}/${ELASTICSEARCH_PORT}) &> /dev/null; do
-      echo "zammad railsserver waiting for elasticsearch server to be ready..."
+      echo "zammad railsserver waiting for opensearch server to be ready..."
       sleep 5
     done
 
